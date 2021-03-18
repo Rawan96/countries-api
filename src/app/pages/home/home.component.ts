@@ -9,10 +9,27 @@ import { Country } from '../../interfaces/country-interface';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-  countries: Observable<Country[]> | undefined;
-  constructor(private countriesServices: CountriesService) {}
+  searchFilter: string | undefined;
+  allCountries: Country[] | undefined;
+
+  constructor(private countriesService: CountriesService) {}
 
   ngOnInit(): void {
-    this.countries = this.countriesServices.getAllCountries();
+    this.countriesService
+      .getAllCountries()
+      .subscribe((countries) => (this.allCountries = countries));
+  }
+
+  //Search country by name
+  get countries() {
+    return this.allCountries
+      ? this.allCountries.filter((country: Country) =>
+          this.searchFilter
+            ? country.name
+                .toLowerCase()
+                .includes(this.searchFilter.toLowerCase())
+            : country
+        )
+      : this.allCountries;
   }
 }
