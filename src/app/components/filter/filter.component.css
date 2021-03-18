@@ -1,0 +1,28 @@
+.filter {
+  position: relative;
+  border-radius: 5px;
+  padding: 16px;
+  font-size: 16px;
+  margin-top: 16px;
+}
+
+.filter-placeholder {
+  display: flex;
+  justify-content: space-between;
+}
+.filter-options {
+  border-radius: 5px;
+  list-style: none;
+  padding-left: 16px;
+  background-color: white;
+  width: 100%;
+}
+.filter-options li {
+  padding: 0.5rem;
+}
+
+@media (min-width: 376px) {
+  .filter {
+    margin-top: 0;
+  }
+}

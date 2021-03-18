@@ -10,6 +10,12 @@
   gap: 5rem;
 }
 
+.country-filters {
+  margin: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
 .search {
   border-radius: 0.25rem;
   font-size: 1rem;
@@ -29,6 +35,16 @@
 @media (min-width: 360px) {
   .countries-cards {
     padding: 20px 70px;
+  }
+
+  .country-filters {
+    margin: 2rem 5rem;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .country-filters app-filter {
+    width: 25%;
   }
 
   .search {

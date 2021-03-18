@@ -7,9 +7,10 @@ import { AppComponent } from './app.component';
 import { IonicModule } from '@ionic/angular';
 import { HomeComponent } from './pages/home/home.component';
 import { CardComponent } from './components/card/card.component';
+import { FilterComponent } from './components/filter/filter.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, CardComponent],
+  declarations: [AppComponent, HomeComponent, CardComponent, FilterComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
