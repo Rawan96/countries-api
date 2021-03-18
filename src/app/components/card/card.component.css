@@ -4,10 +4,6 @@
   overflow: hidden;
 }
 
-.shadow {
-  box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.1);
-}
-
 .card-img img {
   height: auto;
   max-width: 100%;

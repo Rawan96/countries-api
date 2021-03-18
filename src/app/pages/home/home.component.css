@@ -10,8 +10,28 @@
   gap: 5rem;
 }
 
+.search {
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  padding: 1rem;
+}
+
+.icon {
+  font-size: 1rem;
+  padding-right: 0.5rem;
+}
+.search input {
+  font-size: 1rem;
+  border: none;
+  background-color: inherit;
+}
+
 @media (min-width: 360px) {
   .countries-cards {
     padding: 20px 70px;
+  }
+
+  .search {
+    width: 33%;
   }
 }
