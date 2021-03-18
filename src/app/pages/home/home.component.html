@@ -1,6 +1,4 @@
-<section>
-  <section *ngFor="let country of countries | async">
-    {{ country.name }}
-  </section>
+<section class="main countries-cards">
+  <app-card *ngFor="let country of countries | async" [country]="country">
+  </app-card>
 </section>
->

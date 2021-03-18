@@ -1,0 +1,17 @@
+.main {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.countries-cards {
+  display: grid;
+  row-gap: 70px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 5rem;
+}
+
+@media (min-width: 360px) {
+  .countries-cards {
+    padding: 20px 70px;
+  }
+}
