@@ -1,3 +1,13 @@
 .container {
   min-height: 100vh;
 }
+
+.container.dark {
+  background-color: #202c37;
+  color: #fff;
+}
+
+.container.light {
+  background-color: #fafafa;
+  color: #111517;
+}

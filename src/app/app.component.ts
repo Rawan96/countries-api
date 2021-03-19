@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { CountriesService } from './services/countries.service';
+import { ThemeService, Theme } from './services/theme.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -7,10 +8,10 @@ import { CountriesService } from './services/countries.service';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
-  title = 'countries';
-  constructor(private countries: CountriesService) {}
+  theme: Observable<Theme> | undefined;
+  constructor(private themeService: ThemeService) {}
 
   ngOnInit() {
-    //this.countries.getAllCountries().subscribe((res) => console.log(res));
+    this.theme = this.themeService.mode$;
   }
 }
