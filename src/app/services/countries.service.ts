@@ -20,4 +20,10 @@ export class CountriesService {
       .get<Country[]>(`${this.api}/name/${name}`)
       .pipe(map((res) => res[0]));
   }
+
+  getBorderCountriesByCode(codes: string[]) {
+    return this.http.get<Country[]>(
+      `${this.api}/alpha?codes=${codes.join(';')}`
+    );
+  }
 }

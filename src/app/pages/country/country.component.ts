@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { CountriesService } from 'src/app/services/countries.service';
 import {
   Country,
   Currency,
   Language,
 } from '../../interfaces/country-interface';
-import { tap } from 'rxjs/operators';
+import { mergeMap, tap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-country',
@@ -16,6 +16,7 @@ import { tap } from 'rxjs/operators';
 })
 export class CountryComponent implements OnInit {
   country$: Observable<Country> | undefined;
+  borderCountries$: Observable<Country[]> | undefined;
 
   constructor(
     private countries: CountriesService,
@@ -24,9 +25,15 @@ export class CountryComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.params.subscribe((params) => {
-      this.country$ = this.countries
-        .getCountryByName(params.country)
-        .pipe(tap((res) => console.log(res)));
+      this.country$ = this.countries.getCountryByName(params.country).pipe(
+        tap((res) => console.log(res)),
+        mergeMap((res) => {
+          this.borderCountries$ = this.countries.getBorderCountriesByCode(
+            res.borders
+          );
+          return of(res);
+        })
+      );
     });
   }
 
