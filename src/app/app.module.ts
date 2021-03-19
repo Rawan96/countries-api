@@ -9,9 +9,10 @@ import { HomeComponent } from './pages/home/home.component';
 import { CardComponent } from './components/card/card.component';
 import { FilterComponent } from './components/filter/filter.component';
 import { CountryComponent } from './pages/country/country.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, CardComponent, FilterComponent, CountryComponent],
+  declarations: [AppComponent, HomeComponent, CardComponent, FilterComponent, CountryComponent, NavbarComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

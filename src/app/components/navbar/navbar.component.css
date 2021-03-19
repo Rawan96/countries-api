@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  align-items: center;
+  padding: 13px 80px 17px 80px;
+}
+.container h2 {
+  font-size: 20px;
+  font-weight: 800;
+}
+.theme-sec {
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  width: 100px;
+}
+
+@media (max-width: 460px) {
+  .container {
+    padding: 13px 12px 17px 12px;
+  }
+
+  span {
+    font-size: 12px;
+    margin-right: 18px;
+  }
+  .container h2 {
+    font-size: 12px;
+    font-weight: 800;
+  }
+}
