@@ -1,4 +1,4 @@
-<section *ngIf="country" class="card shadow">
+<section *ngIf="country" class="card shadow" [routerLink]="'/' + country.name">
   <section class="card-img">
     <img [src]="country.flag" />
   </section>

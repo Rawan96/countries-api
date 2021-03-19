@@ -1,0 +1,42 @@
+<section *ngIf="country$ | async; let country" class="country">
+  <button class="country-button shadow" [routerLink]="'/'">
+    <ion-icon name="arrow-back-outline"></ion-icon>
+    Back
+  </button>
+  <section class="country-design">
+    <img [src]="country.flag" class="country-img" />
+    <section class="country-detail">
+      <h2 class="country-heading">{{ country.name }}</h2>
+      <section class="country-info">
+        <section class="country-elem">
+          <p><b>Native Name:</b> {{ country.nativeName }}</p>
+          <p><b>Population:</b> {{ country.population | number: "1.0" }}</p>
+          <p><b>Region:</b> {{ country.region }}</p>
+          <p><b>Capital:</b> {{ country.nativeName }}</p>
+        </section>
+
+        <section class="country-elem">
+          <p><b>Top Level Domain:</b> {{ country.topLevelDomain }}</p>
+          <p><b>Currencies:</b> {{ getCurrencies(country.currencies) }}</p>
+          <p><b>Languages:</b> {{ getLanguages(country.languages) }}</p>
+        </section>
+      </section>
+
+      <section class="country-border">
+        <p><strong>Border Countries:</strong></p>
+        <section
+          *ngIf="borderCountries$ | async; let borderCountries"
+          class="border-buttons"
+        >
+          <section
+            *ngFor="let borderCountry of borderCountries"
+            class="button shadow"
+            [routerLink]="'/' + borderCountry.name"
+          >
+            {{ borderCountry.name }}
+          </section>
+        </section>
+      </section>
+    </section>
+  </section>
+</section>

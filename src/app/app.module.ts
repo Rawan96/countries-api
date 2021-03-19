@@ -8,9 +8,10 @@ import { IonicModule } from '@ionic/angular';
 import { HomeComponent } from './pages/home/home.component';
 import { CardComponent } from './components/card/card.component';
 import { FilterComponent } from './components/filter/filter.component';
+import { CountryComponent } from './pages/country/country.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, CardComponent, FilterComponent],
+  declarations: [AppComponent, HomeComponent, CardComponent, FilterComponent, CountryComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
