@@ -81,3 +81,12 @@ button {
     width: 40%;
   }
 }
+
+:host-context(.dark) .button {
+  background-color: #2b3945;
+  color: #fff;
+}
+:host-context(.light) .button {
+  background-color: #fff;
+  color: #111517;
+}

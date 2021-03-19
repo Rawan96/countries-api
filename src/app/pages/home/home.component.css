@@ -51,3 +51,18 @@
     width: 33%;
   }
 }
+
+:host-context(.light) .search {
+  background-color: #fff;
+  color: #858585;
+}
+:host-context(.light) .search input::placeholder {
+  color: #858585;
+}
+:host-context(.dark) .search {
+  background-color: #2b3945;
+  color: #fff;
+}
+:host-context(.dark) .search input::placeholder {
+  color: #fff;
+}

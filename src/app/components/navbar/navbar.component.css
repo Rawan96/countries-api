@@ -16,6 +16,13 @@
   width: 100px;
 }
 
+:host-context(.light) nav {
+  background-color: #fff;
+}
+:host-context(.dark) nav {
+  background-color: #2b3945;
+}
+
 @media (max-width: 460px) {
   .container {
     padding: 13px 12px 17px 12px;

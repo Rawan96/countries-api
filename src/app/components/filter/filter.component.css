@@ -21,6 +21,15 @@
   padding: 0.5rem;
 }
 
+:host-context(.light) .filter,
+:host-context(.light) .filter-options {
+  background-color: #fff;
+}
+:host-context(.dark) .filter,
+:host-context(.dark) .filter-options {
+  background-color: #2b3945;
+}
+
 @media (min-width: 376px) {
   .filter {
     margin-top: 0;

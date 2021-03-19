@@ -26,3 +26,10 @@ b {
 .card-info {
   padding: 32px 23px 40px;
 }
+
+:host-context(.light) .card {
+  background-color: #fff;
+}
+:host-context(.dark) .card {
+  background-color: #2b3945;
+}

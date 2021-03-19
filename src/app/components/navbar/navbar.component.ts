@@ -1,15 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { Theme, ThemeService } from '../../services/theme.service';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.css']
+  styleUrls: ['./navbar.component.css'],
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent {
+  constructor(private themeServices: ThemeService) {}
 
-  constructor() { }
-
-  ngOnInit(): void {
+  toggleTheme() {
+    this.themeServices.toggleMode();
   }
-
 }

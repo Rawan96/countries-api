@@ -1,4 +1,4 @@
-<section class="container">
+<section class="container" [ngClass]="theme | async">
   <app-navbar></app-navbar>
   <router-outlet></router-outlet>
 </section>
