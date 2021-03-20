@@ -172,6 +172,21 @@ describe('CountriesService', () => {
     expect(req.request.method).toEqual('GET');
   });
 
+  it('should get border countries by codes', () => {
+    service
+      .getBorderCountriesByCode(['BRA', 'ECU', 'PAN', 'PER', 'VEN'])
+      .subscribe((countries) => {
+        expect(countries).toBeTruthy();
+        expect(countries.length).toBe(4);
+        expect(countries[0].name).toBe('Brazil');
+      });
+
+    const req = httpTestingController.expectOne(
+      'https://restcountries.eu/rest/v2/alpha?codes=BRA;ECU;PAN;PER;VEN'
+    );
+    expect(req.request.method).toEqual('GET');
+  });
+
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
