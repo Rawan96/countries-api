@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
-  theme: Observable<Theme> | undefined;
+  theme?: Observable<Theme>;
   constructor(private themeService: ThemeService) {}
 
   ngOnInit() {
