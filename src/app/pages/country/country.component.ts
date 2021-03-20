@@ -26,7 +26,6 @@ export class CountryComponent implements OnInit {
   ngOnInit(): void {
     this.route.params.subscribe((params) => {
       this.country$ = this.countries.getCountryByName(params.country).pipe(
-        tap((res) => console.log(res)),
         mergeMap((res) => {
           this.borderCountries$ = this.countries.getBorderCountriesByCode(
             res.borders
