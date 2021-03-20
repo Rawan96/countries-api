@@ -1,5 +1,4 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { ComponentFixture, inject, TestBed } from '@angular/core/testing';
 import { NavbarComponent } from './navbar.component';
 import { By } from '@angular/platform-browser';
 
