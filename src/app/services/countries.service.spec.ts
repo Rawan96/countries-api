@@ -157,6 +157,21 @@ describe('CountriesService', () => {
     expect(req.request.method).toEqual('GET');
   });
 
+  it('should get a country by name', () => {
+    service.getCountryByName('Argentina').subscribe((country) => {
+      expect(country).toBeTruthy();
+      expect(country.name).toBe('Argentina');
+      expect(country.population).toBe(43590400);
+      expect(country.region).toBe('Americas');
+      expect(country.capital).toBe('Buenos Aires');
+    });
+
+    const req = httpTestingController.expectOne(
+      'https://restcountries.eu/rest/v2/name/Argentina'
+    );
+    expect(req.request.method).toEqual('GET');
+  });
+
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
