@@ -6,39 +6,39 @@
 .countries-cards {
   display: grid;
   row-gap: 70px;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 5rem;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 70px;
 }
 
 .country-filters {
-  margin: 2rem 1rem;
+  margin: 32px 16px;
   display: flex;
   flex-direction: column;
 }
 
 .search {
-  border-radius: 0.25rem;
-  font-size: 1rem;
-  padding: 1rem;
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 16px;
 }
 
 .icon {
-  font-size: 1rem;
-  padding-right: 0.5rem;
+  font-size: 16px;
+  padding-right: 8px;
 }
 .search input {
-  font-size: 1rem;
+  font-size: 16px;
   border: none;
   background-color: inherit;
 }
 
 @media (min-width: 360px) {
   .countries-cards {
-    padding: 20px 70px;
+    padding: 20px 60px;
   }
 
   .country-filters {
-    margin: 2rem 5rem;
+    margin: 32px 70px;
     flex-direction: row;
     justify-content: space-between;
   }
