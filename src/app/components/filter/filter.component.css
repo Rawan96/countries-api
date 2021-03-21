@@ -11,6 +11,7 @@
   justify-content: space-between;
 }
 .filter-options {
+  background-color: white;
   border-radius: 5px;
   list-style: none;
   padding-left: 10px;
@@ -21,6 +22,29 @@
 }
 .filter-options li {
   padding: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .filter {
+    height: 50px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 440px) {
+  .filter {
+    width: 200px;
+    padding: 15px;
+  }
+
+  .icon {
+    margin-right: 19px;
+    margin-top: 4px;
+  }
+
+  span {
+    font-size: 12px;
+  }
 }
 
 :host-context(.light) .filter,

@@ -34,7 +34,7 @@ export class HomeComponent implements OnInit {
                   .toLowerCase()
                   .includes(this.searchFilter.toLowerCase())
               : country
-          )
+          ) //by region
           .filter((country: Country) =>
             this.regionFilter
               ? country.region.includes(this.regionFilter)

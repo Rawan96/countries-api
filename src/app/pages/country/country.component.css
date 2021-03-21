@@ -3,6 +3,19 @@
 }
 
 .country-img {
+  max-width: 100%;
+  display: block;
+}
+
+.country-heading {
+  padding-top: 32px;
+}
+
+.country {
+  padding: 16px;
+}
+
+.country-img {
   width: 100%;
 }
 
@@ -55,6 +68,10 @@ button {
   background-color: white;
 }
 
+.country-detail {
+  margin-right: 100px;
+}
+
 @media (min-width: 375px) {
   .country {
     padding: 80px;
@@ -70,7 +87,7 @@ button {
   }
 
   .country-detail {
-    width: 50%;
+    width: 40%;
   }
 
   .country-design {
@@ -79,6 +96,59 @@ button {
   }
   .country-img {
     width: 40%;
+  }
+}
+
+@media (max-width: 768px) {
+  .country {
+    padding: 52px;
+  }
+
+  .country-detail {
+    font-size: 14px;
+    margin-right: 1px;
+  }
+
+  .country-img {
+    width: 46%;
+    height: 280px;
+  }
+
+  .country-heading {
+    font-size: 18px;
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 440px) {
+  .country {
+    padding: 30px;
+  }
+  .country-design {
+    flex-direction: column;
+  }
+
+  .country-img {
+    width: 100%;
+  }
+
+  .country-heading {
+    font-size: 22px;
+    margin-top: 44px;
+  }
+
+  .country-button {
+    margin-bottom: 50px;
+  }
+
+  .country-detail {
+    width: 100%;
+    padding-left: 10px;
+    font-size: 15px;
+  }
+
+  .country-info {
+    flex-direction: column;
   }
 }
 

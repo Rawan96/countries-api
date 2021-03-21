@@ -6,6 +6,11 @@
   padding: 13px 80px 17px 80px;
 }
 
+.nav-heading {
+  outline: none;
+  cursor: pointer;
+}
+
 .container h2 {
   font-size: 20px;
   font-weight: 800;
@@ -15,6 +20,7 @@
   display: flex;
   justify-content: space-between;
   width: 100px;
+  cursor: pointer;
 }
 
 :host-context(.light) nav {

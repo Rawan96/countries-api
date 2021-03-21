@@ -4,17 +4,8 @@
   </section>
   <section class="card-info">
     <h2>{{ country.name }}</h2>
-    <p>
-      <b>Population:</b>
-      {{ country.population | number: "1.0" }}
-    </p>
-    <p>
-      <b>Region:</b>
-      {{ country.region }}
-    </p>
-    <p>
-      <b>Capital:</b>
-      {{ country.capital }}
-    </p>
+    <p><b>Population:</b>{{ country.population | number: "1.0" }}</p>
+    <p><b>Region:</b>{{ country.region }}</p>
+    <p><b>Capital:</b>{{ country.capital }}</p>
   </section>
 </section>
