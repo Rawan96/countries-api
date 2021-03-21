@@ -2,12 +2,10 @@
   min-height: 100vh;
 }
 
-.app.dark {
-  background-color: #202c37;
-  color: #fff;
+:host-context(.dark) .app {
+  background-color: hsl(207, 26%, 17%);
 }
 
-.app.light {
-  background-color: #fafafa;
-  color: #111517;
+:host-context(.light) .app {
+  background-color: #fff;
 }

@@ -1,21 +1,23 @@
-<section class="country-filters">
-  <section class="search shadow">
-    <ion-icon class="icon" name="search-outline"></ion-icon>
-    {{ " " }}
-    <input
-      type="text"
-      placeholder="Search for a country..."
-      [(ngModel)]="searchFilter"
-    />
+<section class="container">
+  <section class="country-filters">
+    <section class="search shadow">
+      <ion-icon class="icon" name="search-outline"></ion-icon>
+      {{ " " }}
+      <input
+        type="text"
+        placeholder="Search for a country..."
+        [(ngModel)]="searchFilter"
+      />
+    </section>
+
+    <app-filter
+      placeholder="Filter by Region"
+      [options]="regions"
+      [(region)]="regionFilter"
+    ></app-filter>
   </section>
 
-  <app-filter
-    placeholder="Filter by Region"
-    [options]="regions"
-    [(region)]="regionFilter"
-  ></app-filter>
-</section>
-
-<section class="main countries-cards">
-  <app-card *ngFor="let country of countries" [country]="country"> </app-card>
+  <section class="main countries-cards">
+    <app-card *ngFor="let country of countries" [country]="country"> </app-card>
+  </section>
 </section>
