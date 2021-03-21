@@ -1,7 +1,7 @@
 <section class="filter shadow">
   <section class="filter-placeholder" (click)="toggleOptions()">
     <span>{{ placeholder }}</span>
-    <ion-icon name="chevron-down-outline"></ion-icon>
+    <ion-icon class="icon" name="chevron-down-outline"></ion-icon>
   </section>
   <ul *ngIf="showOptions" class="filter-options shadow">
     <li *ngFor="let option of options" (click)="select(option)">

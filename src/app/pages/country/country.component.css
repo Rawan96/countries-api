@@ -3,6 +3,19 @@
 }
 
 .country-img {
+  max-width: 100%;
+  display: block;
+}
+
+.country-heading {
+  padding-top: 32px;
+}
+
+.country {
+  padding: 16px;
+}
+
+.country-img {
   width: 100%;
 }
 

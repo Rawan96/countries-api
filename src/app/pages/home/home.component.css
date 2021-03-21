@@ -30,6 +30,7 @@
   font-size: 16px;
   border: none;
   background-color: inherit;
+  outline: none;
 }
 
 @media (min-width: 360px) {
@@ -48,7 +49,30 @@
   }
 
   .search {
-    width: 33%;
+    width: 30%;
+  }
+}
+
+@media (max-width: 768px) {
+  .search {
+    width: 50%;
+    height: 50px;
+  }
+}
+
+@media (max-width: 440px) {
+  .search {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .search input {
+    font-size: 12px;
+  }
+
+  .country-filters {
+    margin: 33px 30px;
+    flex-direction: column;
   }
 }
 
