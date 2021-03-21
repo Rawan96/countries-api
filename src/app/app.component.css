@@ -1,13 +1,13 @@
-.container {
+.app {
   min-height: 100vh;
 }
 
-.container.dark {
+.app.dark {
   background-color: #202c37;
   color: #fff;
 }
 
-.container.light {
+.app.light {
   background-color: #fafafa;
   color: #111517;
 }
