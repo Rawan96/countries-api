@@ -23,7 +23,7 @@ export class ThemeSwitcherService {
     const theme = localStorage.getItem('theme');
 
     if (theme) {
-      this.isDarkTheme = true;
+      this.isDarkTheme = false;
       this.changeTheme();
     }
   }
