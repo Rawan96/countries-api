@@ -32,4 +32,5 @@ b {
 }
 :host-context(.dark) .card {
   background-color: #2b3945;
+  color: #fff;
 }

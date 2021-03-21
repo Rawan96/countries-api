@@ -29,7 +29,8 @@
 }
 :host-context(.dark) .filter,
 :host-context(.dark) .filter-options {
-  background-color: #2b3945;
+  background-color: hsl(209, 23%, 22%);
+  color: #fff;
 }
 
 @media (min-width: 376px) {

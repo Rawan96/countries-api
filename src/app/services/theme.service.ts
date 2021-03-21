@@ -1,30 +1,30 @@
-// import { Injectable } from '@angular/core';
-// import { BehaviorSubject, Observable } from 'rxjs';
+import { Inject, Injectable } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
 
-// export enum Theme {
-//   light = 'light',
-//   dark = 'dark',
-// }
+@Injectable({
+  providedIn: 'root',
+})
+export class ThemeSwitcherService {
+  isDarkTheme: boolean | undefined;
 
-// @Injectable({
-//   providedIn: 'root',
-// })
-// export class ThemeService {
-//   private mode?: BehaviorSubject<Theme> | any = new BehaviorSubject(
-//     Theme.light
-//   );
+  constructor(@Inject(DOCUMENT) private document: Document) {}
 
-//   constructor() {}
+  changeTheme(): void {
+    if (this.isDarkTheme) {
+      this.document.body.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      this.document.body.classList.remove('dark');
+      localStorage.clear();
+    }
+  }
 
-//   get mode$(): Observable<Theme> {
-//     return this.mode.asObservable();
-//   }
+  loadTheme(): void {
+    const theme = localStorage.getItem('theme');
 
-//   toggleMode() {
-//     if (this.mode.value === Theme.light) {
-//       this.mode.next(Theme.dark);
-//     } else {
-//       this.mode.next(Theme.light);
-//     }
-//   }
-// }
+    if (theme) {
+      this.isDarkTheme = true;
+      this.changeTheme();
+    }
+  }
+}

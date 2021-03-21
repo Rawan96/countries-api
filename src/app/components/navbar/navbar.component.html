@@ -1,7 +1,7 @@
 <nav class="shadow container">
   <h2 [routerLink]="'/'">Where in the world?</h2>
 
-  <section class="theme-sec">
+  <section class="theme-sec" (click)="changeTheme()">
     <ion-icon class="icon" name="moon-outline"></ion-icon>
     {{ " " }}
     <span>Dark mode</span>

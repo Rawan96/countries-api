@@ -22,6 +22,7 @@
 }
 :host-context(.dark) nav {
   background-color: #2b3945;
+  color: #fff;
 }
 
 @media (max-width: 460px) {
