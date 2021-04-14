@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { CountriesService } from 'src/app/services/countries.service';
 import { Country } from '../../interfaces/country-interface';
+import { catchError } from 'rxjs/operators';
+import { of } from 'rxjs';
 
 const REGIONS = ['Africa', 'Americas', 'Asia', 'Europe', 'Oceania'];
 
@@ -15,12 +17,23 @@ export class HomeComponent implements OnInit {
   allCountries: Country[] | undefined;
   regionFilter: string | undefined;
   regions = REGIONS;
+  errorMsg: string | undefined;
 
   constructor(private countriesService: CountriesService) {}
 
   ngOnInit(): void {
     this.countriesService
       .getAllCountries()
+      // .pipe(
+      //   catchError(error => {
+      //       if (error.error instanceof ErrorEvent) {
+      //           this.errorMsg = `Error: ${error.error.message}`;
+      //       } else {
+      //           this.errorMsg = `Error: ${error.message}`;
+      //       }
+      //       return of([]);
+      //   })
+      // );
       .subscribe((countries) => (this.allCountries = countries));
   }
 
