@@ -12,7 +12,14 @@ import { CountryComponent } from './pages/country/country.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, CardComponent, FilterComponent, CountryComponent, NavbarComponent],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    CardComponent,
+    FilterComponent,
+    CountryComponent,
+    NavbarComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
