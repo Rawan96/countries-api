@@ -15,13 +15,19 @@ export class HomeComponent implements OnInit {
   allCountries: Country[] | undefined;
   regionFilter: string | undefined;
   regions = REGIONS;
+  errorText: string | undefined;
+  errBlock: Boolean | undefined;
 
   constructor(private countriesService: CountriesService) {}
 
   ngOnInit(): void {
-    this.countriesService
-      .getAllCountries()
-      .subscribe((countries) => (this.allCountries = countries));
+    this.countriesService.getAllCountries().subscribe(
+      (countries) => (this.allCountries = countries),
+      (error) => {
+        this.errBlock = true;
+        this.errorText = error.message;
+      }
+    );
   }
 
   //Search country by name
