@@ -22,12 +22,12 @@
         </section>
       </section>
 
-      <section class="country-border">
+      <section
+        class="country-border"
+        *ngIf="borderCountries$ | async; let borderCountries"
+      >
         <p><b>Border Countries:</b></p>
-        <section
-          *ngIf="borderCountries$ | async; let borderCountries"
-          class="border-buttons"
-        >
+        <section class="border-buttons">
           <section
             *ngFor="let borderCountry of borderCountries"
             class="button shadow"
