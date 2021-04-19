@@ -7,7 +7,7 @@ import {
   Currency,
   Language,
 } from '../../interfaces/country-interface';
-import { mergeMap, tap } from 'rxjs/operators';
+import { mergeMap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-country',

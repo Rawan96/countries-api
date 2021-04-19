@@ -11,6 +11,7 @@ import { FilterComponent } from './components/filter/filter.component';
 import { CountryComponent } from './pages/country/country.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HttpIntercept } from './services/http-interceptor';
+import { LoadingComponent } from './components/loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { HttpIntercept } from './services/http-interceptor';
     FilterComponent,
     CountryComponent,
     NavbarComponent,
+    LoadingComponent,
   ],
   imports: [
     BrowserModule,
