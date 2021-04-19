@@ -23,6 +23,10 @@
     <p>The resource requested could not be found on this server!</p>
   </section>
 
+  <div *ngIf="countries?.length === 0" class="no-result">
+    <h1>Sorry, There is No Country with This Name!</h1>
+  </div>
+
   <section class="main countries-cards">
     <app-card *ngFor="let country of countries" [country]="country"> </app-card>
   </section>
