@@ -17,6 +17,8 @@
     ></app-filter>
   </section>
 
+  <app-loading *ngIf="isLoading"> </app-loading>
+
   <section class="error-block" *ngIf="errBlock" id="error">
     <h1>404</h1>
     <h2>Not Found</h2>
@@ -26,8 +28,6 @@
   <div *ngIf="countries?.length === 0" class="no-result">
     <h1>Sorry, There is No Country with This Name!</h1>
   </div>
-
-  <app-loading *ngIf="isLoading"> </app-loading>
 
   <section class="main countries-cards">
     <app-card *ngFor="let country of countries" [country]="country"> </app-card>
