@@ -71,6 +71,16 @@
   font-size: 0.8rem;
 }
 
+.no-result {
+  margin-top: 10rem;
+  text-align: center;
+  font-size: 20px;
+}
+
+:host-context(.dark) .no-result {
+  color: #fff;
+}
+
 :host-context(.dark) .error-block {
   color: #fff;
 }
