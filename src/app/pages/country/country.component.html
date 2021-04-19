@@ -3,6 +3,9 @@
     <ion-icon name="arrow-back-outline"></ion-icon>
     Back
   </button>
+
+  <app-loading *ngIf="isLoading"> </app-loading>
+
   <section class="country-design">
     <img [src]="country.flag" class="country-img" />
     <section class="country-detail">

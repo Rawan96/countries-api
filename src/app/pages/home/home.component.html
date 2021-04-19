@@ -27,6 +27,8 @@
     <h1>Sorry, There is No Country with This Name!</h1>
   </div>
 
+  <app-loading *ngIf="isLoading"> </app-loading>
+
   <section class="main countries-cards">
     <app-card *ngFor="let country of countries" [country]="country"> </app-card>
   </section>

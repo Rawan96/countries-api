@@ -17,12 +17,16 @@ export class HomeComponent implements OnInit {
   regions = REGIONS;
   errorText: string | undefined;
   errBlock: Boolean | undefined;
+  isLoading: boolean = true;
 
   constructor(private countriesService: CountriesService) {}
 
   ngOnInit(): void {
     this.countriesService.getAllCountries().subscribe(
-      (countries) => (this.allCountries = countries),
+      (countries) => {
+        this.allCountries = countries;
+        this.isLoading = false;
+      },
       (error) => {
         this.errBlock = true;
         this.errorText = error.message;
